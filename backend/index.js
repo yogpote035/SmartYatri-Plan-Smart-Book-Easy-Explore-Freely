@@ -25,9 +25,10 @@ app.get("/health", (req, res) => res.status(200).send("ok"));
 app.head("/health", (req, res) => res.status(200).send("ok"));
 
 app.get("/", (req, res) => {
-  res.json("💀💀 Welcome to SmartYatri Backend Development! 💀💀");
+  res.json("Welcome to SmartYatri Backend Development! 🚀");
 });
-
+// lets Start
+app.use("/api/auth", require("./routes/UserRoutes/index"));
 
 app.listen(PORT, () => {
   console.log(`Server listening on PORT ${PORT} ⛳`);
